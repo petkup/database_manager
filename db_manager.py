@@ -3,7 +3,7 @@ from datetime import datetime
 import psycopg2
 from psycopg2 import Error
 
-from italian_venues import ITALIAN_VENUES
+#from italian_venues import ITALIAN_VENUES
 
 
 class DatabaseManager():
@@ -188,10 +188,10 @@ class DatabaseManager():
         elif home_goals < away_goals: return "Away"
         elif home_goals == away_goals: return "Draw"
 
-    def get_italian_venue_from_team(self, team: str) -> str:
-        venue = ITALIAN_VENUES.get(team, None)
-        if not venue: raise ValueError("You have inserted wrong team name")
-        return venue
+    #def get_italian_venue_from_team(self, team: str) -> str:
+     #   venue = ITALIAN_VENUES.get(team, None)
+      #  if not venue: raise ValueError("You have inserted wrong team name")
+       # return venue
 
     def get_minute_from_string(self, minute: str) -> int:
         split = minute.split('+')
